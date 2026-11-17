@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Java",
+            "type": "shell",
+            "command": "if (Test-Path 'lab-03') { Set-Location 'lab-03' }; javac -encoding UTF-8 -cp 'lib/*;bin' -d bin (Get-ChildItem -Path src -Filter *.java -Recurse).FullName",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$javac"]
+        },
+        {
+            "label": "Run Recv",
+            "type": "shell",
+            "command": "if (Test-Path 'lab-03') { Set-Location 'lab-03' }; java -cp 'lib/*;bin' Recv",
+            "dependsOn": "Build Java"
+        },
+        {
+            "label": "Run Send",
+            "type": "shell",
+            "command": "if (Test-Path 'lab-03') { Set-Location 'lab-03' }; java -cp 'lib/*;bin' Send",
+            "dependsOn": "Build Java"
+        }
+    ]
+}

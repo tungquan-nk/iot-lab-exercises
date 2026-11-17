@@ -1,0 +1,17 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+            "default": true
+        }
+    ],
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "files.encoding": "utf8"
+}
